@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fibonacci Sequence</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="gol.html">Game of Life</a>
+      <a href="recursion.html">Recursion</a>
+      <a href="fibonacci.html">Fibonacci</a>
+      <a href="factorial.html">Factorial</a>
+      <a href="sierpinski.html">Sierpinski Triangle</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <meta name="google-adsense-account" content="ca-pub-6436042832350334">
+  </header>
+
+    <div id="recursion">
+      <p>Enter the length of the Fibonacci sequence you want to generate:</p>
+      <input type="number" id="fibonacciLength" min="1" value="10">
+      <button id="generateButton">Generate</button>
+      <div id="fibonacciResult"></div>
+    </div>
+  </div>
+    <div id="recursion">
+    <strong>The Fibonacci Series: A Journey of Nature's Numbers</strong>
+
+    <p>The Fibonacci sequence, named after the Italian mathematician Leonardo Fibonacci, is a fascinating series of numbers with surprising applications in nature, mathematics, and even art. It's a simple sequence to define, yet it unfolds with surprising complexity. Let's delve into the world of Fibonacci numbers.</p>
+
+<p><strong>The Starting Point: 0 and 1</strong></p>
+
+<p>The Fibonacci series begins with two very basic numbers: 0 and 1. These are the building blocks for the entire sequence.</p>
+
+<p><strong>The Rule of Addition: Each Number is a Sum of the Previous Two</strong></p>
+
+<p>The magic of the Fibonacci sequence lies in its defining rule. To find any number in the sequence after the first two, you simply add the two preceding numbers. So, the third number is the sum of the first two (0 + 1 = 1), the fourth number is the sum of the second and third (1 + 1 = 2), and so on.</p>
+
+<p><strong>The Unfolding Sequence: A Look Ahead</strong></p>
+
+<p>Following this rule, the Fibonacci sequence unfolds as follows:</p>
+
+<p>0, 1, 1, 2, 3, 5, 8, 13, 21, 55, 89, ...</p>
+
+<p>The sequence continues infinitely, with each number growing larger as we move further along.</p>
+
+<p><strong>The Beauty of Fibonacci: Nature's Hidden Pattern: Fibonacci in the Real World</strong></p>
+
+<p>The Fibonacci sequence isn't just an abstract mathematical concept. It surprisingly appears in various natural phenomena. Here are some fascinating examples:</p>
+
+<ul>
+<li><strong>The Spiral of a Sunflower:</strong> The arrangement of seeds in a sunflower head often follows a Fibonacci spiral, maximizing seed packing and light absorption.</li>
+<li><strong>The Branching of a Tree:</strong> The way branches appear on a tree trunk can often be described by the Fibonacci sequence, leading to efficient growth patterns.</li>
+<li><strong>The Reproduction of Rabbits:</strong> The Reproduction of Rabbits: (The famous Fibonacci Rabbits problem) While not a perfect analogy, the ideal breeding pattern of rabbits can be modeled using the Fibonacci sequence.</li>
+</ul>
+
+<p><strong>The Golden Ratio: A Connection Emerges</strong></p>
+
+<p>As the Fibonacci sequence progresses, the ratio between successive numbers gets closer and closer to a special number called the Golden Ratio (Φ, Phi). This ratio, approximately equal to 1.618, is considered aesthetically pleasing and is found in various natural forms like seashells and flower petals.</p>
+
+<p><strong>The Beauty of Mathematics: A Never-Ending Sequence</strong></p>
+
+<p>The Fibonacci sequence offers a glimpse into the beauty and hidden patterns within mathematics. It connects the abstract world of numbers with the tangible world of nature, showcasing the elegance and unexpected connections found within our universe. Whether you're a mathematician, an artist, or simply curious about the world around you, the Fibonacci sequence offers a captivating journey into a world of endless discovery.</p>
+    </div>
+
+  <div id="info">
+    <p>&copy; NetTek Ltd. Part of the <a href="https://gbnet.net">GBNet network</a></p>
+    <p>Contact: <a href="mailto:webmaster@gbnet.net">webmaster@gbnet.net</a></p>
+  </div>
+
+  <button onclick="window.open('index.html', '_blank')">Open Homepage</button>
+
+  <script>
+    const fibonacciLengthInput = document.getElementById('fibonacciLength');
+    const generateButton = document.getElementById('generateButton');
+    const fibonacciResult = document.getElementById('fibonacciResult');
+
+    generateButton.addEventListener('click', generateFibonacci);
+
+    function generateFibonacci() {
+      const length = parseInt(fibonacciLengthInput.value, 10);
+      const sequence = getFibonacciSequence(length);
+      displayFibonacciSequence(sequence);
+    }
+
+    function getFibonacciSequence(length) {
+      const sequence = [0, 1];
+      for (let i = 2; i < length; i++) {
+        sequence[i] = sequence[i - 1] + sequence[i - 2];
+      }
+      return sequence;
+    }
+
+    function displayFibonacciSequence(sequence) {
+      fibonacciResult.innerHTML = `<p>Fibonacci Sequence (length: ${sequence.length}):</p>`;
+      fibonacciResult.innerHTML += `<p>${sequence.join(', ')}</p>`;
+    }
+  </script>
+  <script src="ads.js"></script>
+</body>
+</html>

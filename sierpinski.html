@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sierpinski Triangle</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    #sierpinskiCanvasContainer {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 20px;
+    }
+
+    #sierpinskiCanvas {
+      display: block;
+      border: 1px solid #333;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="gol.html">Game of Life</a>
+      <a href="recursion.html">Recursion</a>
+      <a href="fibonacci.html">Fibonacci series</a>
+      <a href="factorial.html">Factorial</a>
+      <a href="sierpinski.html">Sierpinski Triangle</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <meta name="google-adsense-account" content="ca-pub-6436042832350334">
+  </header>
+
+  <div id="sierpinskiCanvasContainer">
+    <canvas id="sierpinskiCanvas" width="600" height="600"></canvas>
+  </div>
+
+  <div id="container">
+    <div id="sierpinskiControls">
+      <label for="iterationsInput">Number of Iterations:</label>
+      <input type="number" id="iterationsInput" min="0" value="5">
+      <button id="drawButton">Draw</button>
+    </div>
+    <div id="sierpinskiDescription">
+      <p><strong>The Sierpinski Triangle: A Fractal Masterpiece</strong></p>
+
+      <p>The Sierpinski triangle, named after the Polish mathematician Wacław Sierpiński, is a striking example of a fractal – a geometric shape that exhibits self-similarity at different scales. Constructed through an iterative process, this triangle is a captivating blend of simplicity and complexity.</p>
+
+      <p>To create the Sierpinski triangle, we start with an equilateral triangle. Then, we remove the middle triangle by connecting the midpoints of its sides. This process is repeated on the remaining three triangles, and then repeated again on the new set of triangles, and so on, ad infinitum.</p>
+
+      <p>As the number of iterations increases, the Sierpinski triangle reveals its intricate, self-similar nature. Each smaller triangle is a replica of the larger one, with the same patterns repeating at different scales. This self-similarity is a hallmark of fractals, and it's what makes the Sierpinski triangle so visually captivating.</p>
+
+      <p>The Sierpinski triangle has applications in various fields, including computer graphics, image compression, and antenna design. Its fractal nature allows for efficient data representation and storage, making it valuable in digital technology.</p>
+
+      <p>Explore the Sierpinski triangle by adjusting the number of iterations and observing the intricate patterns that emerge. Witness the beauty of mathematics unfold before your eyes as this simple iterative process gives rise to a mesmerizing fractal structure.</p>
+
+<p>Beware, going more than 15 iterations a) isn't visible at the resolution of
++the JS canvas b) 15 iterations is a 14 million+ recursion.</p>
+    </div>
+  </div>
+
+  <div id="info">
+    <p>&copy; NetTek Ltd. Part of the <a href="https://gbnet.net">GBNet network</a></p>
+    <p>Contact: <a href="mailto:webmaster@gbnet.net">webmaster@gbnet.net</a></p>
+  </div>
+
+  <script src="sierpinski.js"></script>
+  <script src="ads.js"></script>
+</body>
+</html>

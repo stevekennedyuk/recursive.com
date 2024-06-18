@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="gol.html">Game of Life</a>
+      <a href="recursion.html">Recursion</a>
+      <a href="fibonacci.html">Fibonacci series</a>
+      <a href="factorial.html">Factorial</a>
+      <a href="sierpinski.html">Sierpinski Triangle</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <meta name="google-adsense-account" content="ca-pub-6436042832350334">
+  </header>
+
+  <div id="container">
+    <div id="recursion">
+      <p>There is not really much more contact information than below, there maybe more info located at the URL below for those really interested.</p>
+    </div>
+  </div>
+<div id="container">
+  <div id="recursion">
+    <p>There is not really much more contact information than below, there maybe more info located at the URL below for those really interested.</p>
+  </div>
+  
+  <form id="contactForm">
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" required>
+
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" required>
+
+    <label for="message">Message:</label>
+    <textarea id="message" name="message" required></textarea>
+
+    <button type="submit">Send Message</button>
+  </form>
+</div>
+
+  <div id="info">
+    <p>&copy; NetTek Ltd. Part of the <a href="https://gbnet.net">GBNet network</a></p>
+    <p>Contact: <a href="mailto:webmaster@gbnet.net">webmaster@gbnet.net</a></p>
+  </div>
+
+  <button onclick="window.open('index.html', '_blank')">Open Homepage</button>
+
+  <script>
+    const form = document.getElementById('contactForm');
+    form.addEventListener('submit', sendEmail);
+
+    function sendEmail(event) {
+      event.preventDefault(); // Prevent the default form submission
+
+      const name = document.getElementById('name').value;
+      const email = document.getElementById('email').value;
+      const message = document.getElementById('message').value;
+
+      const mailtoLink = `mailto:webmaster@gbnet.net?subject=Contact%20Form%20Submission&body=Name:%20${encodeURIComponent(name)}%0D%0AEmail:%20${encodeURIComponent(email)}%0D%0AMessage:%20${encodeURIComponent(message)}`;
+
+      window.open(mailtoLink, '_blank');
+      form.reset(); // Reset the form after sending
+    }
+  </script>
+
+  <script src="ads.js"></script>
+
+</body>
+</html>

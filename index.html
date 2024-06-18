@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mandelbrot Fractal</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="gol.html">Game of Life</a>
+      <a href="recursion.html">Recursion</a>
+      <a href="fibonacci.html">Fibonacci series</a>
+      <a href="factorial.html">Factorial</a>
+      <a href="sierpinski.html">Sierpinski Triangle</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <meta name="google-adsense-account" content="ca-pub-6436042832350334">
+  </header>
+
+  <div id="instructions">
+    <p>Click to zoom out, Shift Click to zoom in</p>
+  </div>
+  
+  <div id="container">
+    <div id="fractal-container">
+      <canvas id="fractal-canvas"></canvas>
+    </div>
+    <div id="recursion">
+      <p>Fractals, with their infinitely detailed self-similar patterns, have captivated mathematicians and artists alike. But how do we generate these intricate structures? Enter recursion, a powerful programming technique that unlocks the secrets of fractal creation. Today, we'll delve into the fascinating world of the Mandelbrot set, using recursion as our guide.</p>
+	    <p>Imagine a complex plane, where the x-axis represents real numbers and the y-axis imaginary numbers. The Mandelbrot set resides within this plane, defined by a surprisingly simple rule. For a specific point (c) on the complex plane, we start with an initial value, z = 0. We then perform a repetitive calculation: square z, add c to it, and assign the result back to z. We keep iterating this process. If the absolute value of z never exceeds a certain limit (often 2), the point (c) belongs to the Mandelbrot set. Conversely, if z explodes towards infinity within a set number of iterations (often called the maximum iteration), (c) lies outside the set.</p>
+	    <p>Here's where recursion comes in. We can define a function that takes a complex number (c) and the current iteration number as inputs. The function performs the squaring and addition, checks if the magnitude limit is breached, and returns a value based on the outcome. If the limit is exceeded or the maximum iteration is reached, it returns a value indicating the point's absence from the set. However, if the limit is not exceeded, the function calls itself again, passing the newly calculated z and the incremented iteration number. This self-referential call continues until the outcome is clear.</p>
+	    <p>Through recursion, we can efficiently explore the complex plane, applying this function to every point (c) we want to examine. Each point undergoes its own iterative journey, revealing its membership in the Mandelbrot set or not. By coloring pixels corresponding to points within the set differently from those outside, we create the breathtaking visualizations of the Mandelbrot set, known for its intricate shapes and mesmerizing detail.</p>
+	    <p>The beauty of recursion lies in its ability to break down complex problems into smaller, self-similar ones. In the case of the Mandelbrot set, each point's classification hinges on the behavior of the previous iteration, creating a captivating dance of calculations. As we zoom deeper into the Mandelbrot set, recursion allows us to uncover ever-finer levels of detail, showcasing the fractal's infinite complexity arising from a simple, recursive rule.</p>
+	    <p>So, the next time you marvel at the intricate patterns of a fractal, remember the power of recursion lurking beneath the surface. It's a testament to the elegance of mathematics, where a single, self-referential concept can unlock a universe of infinite detail.</p>
+    </div>
+  </div>
+
+  <div id="info">
+    <p>&copy; NetTek Ltd. Part of the <a href="https://gbnet.net">GBNet network</a></p>
+    <p>Contact: <a href="mailto:webmaster@gbnet.net">webmaster@gbnet.net</a></p>
+  </div>
+
+  <button onclick="window.open('index.html', '_blank')">Open Homepage</button>
+
+  <script src="mandelbrot.js"></script>
+  <script src="ads.js"></script>
+</body>
+</html>

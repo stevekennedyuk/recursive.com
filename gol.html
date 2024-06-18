@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Conway's Game of Life</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    #gameCanvasContainer {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 20px;
+    }
+
+    #gameCanvas {
+      display: block;
+      border: 1px solid #333;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="gol.html">Game of Life</a>
+      <a href="recursion.html">Recursion</a>
+      <a href="fibonacci.html">Fibonacci series</a>
+      <a href="factorial.html">Factorial</a>
+      <a href="sierpinski.html">Sierpinski Triangle</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <meta name="google-adsense-account" content="ca-pub-6436042832350334">
+  </header>
+
+  <div id="gameCanvasContainer">
+    <canvas id="gameCanvas" width="400" height="400"></canvas>
+  </div>
+
+  <div id="container">
+    <div id="gameControls">
+      <button id="startButton">Start</button>
+      <button id="stopButton" disabled>Stop</button>
+      <select id="shapeSelect">
+        <option value="clear">Clear</option>
+        <option value="glider">Glider</option>
+        <option value="blinker">Blinker</option>
+        <option value="toad">Toad</option>
+        <option value="draw">Draw</option>
+      </select>
+    </div>
+    <div id="recursion">
+      <p>To play the Game of Life just click on the type of object, then press start and the objects will live or die (and my form a stable outcome), then press stop. Clear the grid, then selecting Draw will allow dragging the mouse/clicking to draw objects on the grid and you then hit start and can see if your object will survive or fade away.</p>
+      <p><strong>Conway's Game of Life: Where Simplicity Breeds Complexity</strong></p>
+
+       <p>Imagine a universe made of tiny squares, some pulsing with life, others inert. This is the world of Conway's Game of Life, a deceptively simple simulation that unfolds surprising complexity. Invented by British mathematician John Horton Conway in 1970, the Game of Life is a cellular automaton, meaning it operates on a grid of cells that can be in one of two states: alive or dead.</p>
+
+       <p>The beauty of the Game of Life lies in its minimalist rules. Each cell interacts with its eight neighbors (the squares surrounding it). Here's how life unfolds:</p>
+
+        <ul>
+		<li><strong>Lonely or crowded? You die.</strong> A live cell with less than two neighbors dies of loneliness, while one with more than three succumbs to overcrowding.</li>
+		<li><strong>Just the right company? Thrive!</strong> A live cell with two or three live neighbors survives.</li>
+		<li><strong>Potential for life!</strong> A dead cell with exactly three live neighbors springs to life.</li>
+	</ul>
+	<p>These simple rules, applied simultaneously to every cell, generate surprising results. Some patterns, like the "blinker" or the "glider," oscillate or move in predictable ways. Others, like complex spaceships, churn out endlessly evolving structures. The most fascinating patterns are "gliders" that travel across the grid, creating a sense of motion in this static world.</p>
+
+	<p>The Game of Life's appeal goes beyond its mesmerizing visuals. It's a zero-player game, meaning after setting the initial configuration, the game unfolds on its own. This has led mathematicians and programmers to explore its computational power. Remarkably, the Game of Life is Turing complete, meaning it can simulate any computer program. This connection between such a simple system and universal computation continues to be a source of fascination.</p>
+
+	<p>So, how do you play the Game of Life? There's no winning or losing, just exploration. You can set up your own initial patterns and watch them evolve, or try out famous ones like the glider gun, which continuously produces gliders. There are many online tools and apps available to play with the Game of Life, letting you experiment and discover its hidden depths.</p>
+
+	<p>In conclusion, Conway's Game of Life is a testament to the power of simplicity. With a handful of rules and a grid of squares, it creates a universe brimming with complexity, motion, and surprise. It's a game that invites tinkering, exploration, and reflection, reminding us that even the simplest systems can hold profound mysteries.</p>
+    </div>
+  </div>
+
+  <div id="info">
+    <p>&copy; NetTek Ltd. Part of the <a href="https://gbnet.net">GBNet network</a></p>
+    <p>Contact: <a href="mailto:webmaster@gbnet.net">webmaster@gbnet.net</a></p>
+  </div>
+
+  <button onclick="window.open('index.html', '_blank')">Open Homepage</button>
+
+  <script src="game-of-life.js"></script>
+  <script src="ads.js"></script>
+</body>
+</html>

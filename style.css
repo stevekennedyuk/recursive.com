@@ -1,0 +1,138 @@
+/* Reset default styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* General body styles */
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  background-color: #f4f4f4;
+  color: #333;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Header and Navigation */
+header {
+  background-color: #333;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+nav {
+  display: flex;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+  margin-right: 10px;
+  padding: 5px 10px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+nav a:last-child {
+  margin-right: 0;
+}
+
+nav a:hover {
+  background-color: #555;
+}
+
+/* Instructions */
+#instructions {
+  background-color: #e6e6e6;
+  padding: 10px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Game Canvas */
+#gameCanvas {
+  display: block;
+  margin: 20px auto;
+  border: 1px solid #333;
+}
+
+/* Game Controls */
+#gameControls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+#gameControls button,
+#gameControls select {
+  margin: 0 10px;
+}
+
+/* Container */
+#container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  display: grid;
+  grid-template-rows: auto 1fr; /* Create two rows, one for the fractal and one for the text */
+  grid-gap: 20px;
+}
+
+/* Recursion Text */
+#recursion {
+  background-color: #fff;
+  padding: 10px; /* Reduce padding */
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  font-size: 14px; /* Decrease font size */
+}
+
+#recursion p {
+  margin-bottom: 10px;
+}
+
+/* Information */
+#info {
+  background-color: #e6e6e6;
+  padding: 20px;
+  border-radius: 5px;
+  text-align: center;
+  grid-column: 1 / -1; /* Make the info section span across both columns */
+}
+
+#info p {
+  margin-bottom: 10px;
+}
+
+#info a {
+  color: #333;
+  text-decoration: none;
+}
+
+#info a:hover {
+  text-decoration: underline;
+}
+
+/* Button */
+button {
+  display: block;
+  margin: 20px auto;
+  padding: 10px 20px;
+  background-color: #333;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #555;
+}

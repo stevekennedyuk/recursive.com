@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Factorial Calculation</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="gol.html">Game of Life</a>
+      <a href="recursion.html">Recursion</a>
+      <a href="fibonacci.html">Fibonacci series</a>
+      <a href="factorial.html">Factorial</a>
+      <a href="sierpinski.html">Sierpinski Triangle</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <meta name="google-adsense-account" content="ca-pub-6436042832350334">
+  </header>
+
+    <div id="factorial">
+      <p>Enter a number to calculate its factorial:</p>
+      <input type="number" id="factorialNumber" min="0" value="5">
+      <button id="calculateButton">Calculate</button>
+      <div id="factorialResult"></div>
+    </div>
+  </div>
+    <div id="factorial">
+<strong>The Factorial: A Multiplicative Journey</strong>
+
+    <p>The factorial is a fundamental concept in mathematics, particularly in combinatorics and probability theory. It represents the product of all positive integers up to a given number. Calculating factorials has applications in various fields, including statistics, physics, and computer science.</p>
+
+<p><strong>The Starting Point: Zero and One</strong></p>
+
+<p>The factorial notation is denoted by an exclamation point (!). By convention, the factorial of 0 is defined as 1, making it a useful base case in calculations.</p>
+
+<p><strong>The Rule of Multiplication: Each Number is a Product of the Previous and Itself</strong></p>
+
+<p>The factorial of any positive integer n is defined as the product of all positive integers less than or equal to n. For example, the factorial of 5 (denoted as 5!) is calculated as 5 x 4 x 3 x 2 x 1 = 120.</p>
+
+<p><strong>The Unfolding Sequence: A Look Ahead</strong></p>
+
+<p>The factorial sequence starts with:</p>
+
+<p>0! = 1, 1! = 1, 2! = 2, 3! = 6, 4! = 24, 5! = 120, ...</p>
+
+<p>As the numbers grow, the factorials increase rapidly, leading to extremely large values even for relatively small inputs.</p>
+
+<p><strong>The Beauty of Factorials: Applications in Mathematics and Beyond</strong></p>
+
+<p>Factorials have numerous applications in various fields, including:</p>
+
+<ul>
+<li><strong>Combinatorics:</strong> Factorials are used to calculate the number of permutations and combinations of a set of objects.</li>
+<li><strong>Probability Theory:</strong> Factorials are employed in the calculation of probabilities, especially in scenarios involving independent events.</li>
+<li><strong>Computer Science:</strong> Factorials are used in algorithms and data structures, such as sorting and graph theory.</li>
+</ul>
+
+<p><strong>The Recursive Nature: A Self-Referential Pattern</strong></p>
+<p>Factorials can be calculated using a recursive formula, where the factorial of a number is defined in terms of the factorial of a smaller number. This recursive approach often leads to elegant and concise implementations in programming.</p>
+
+<p><strong>The Beauty of Mathematics: A Journey of Multiplication</strong></p>
+
+<p>The factorial function offers a glimpse into the richness of mathematical patterns and their practical applications. It connects the abstract world of numbers with the tangible world of problem-solving, showcasing the elegance and power of mathematical thinking. Whether you're a mathematician, a computer scientist, or simply curious about the world around you, the factorial function offers a captivating journey into a world of multiplicative exploration.</p>
+    </div>
+
+  <div id="info">
+    <p>&copy; NetTek Ltd. Part of the <a href="https://gbnet.net">GBNet network</a></p>
+    <p>Contact: <a href="mailto:webmaster@gbnet.net">webmaster@gbnet.net</a></p>
+  </div>
+
+  <button onclick="window.open('index.html', '_blank')">Open Homepage</button>
+
+  <script>
+    const factorialNumberInput = document.getElementById('factorialNumber');
+    const calculateButton = document.getElementById('calculateButton');
+    const factorialResult = document.getElementById('factorialResult');
+
+    calculateButton.addEventListener('click', calculateFactorial);
+
+    function calculateFactorial() {
+      const number = parseInt(factorialNumberInput.value, 10);
+      const factorialResult = getFactorial(number);
+      displayFactorial(number, factorialResult);
+    }
+
+    function getFactorial(n) {
+      let result = 1;
+      let intermediateResults = [result];
+
+      for (let i = 1; i <= n; i++) {
+        result *= i;
+        intermediateResults.push(result);
+      }
+
+      return intermediateResults;
+    }
+
+    function displayFactorial(number, intermediateResults) {
+      const factorialValue = intermediateResults[intermediateResults.length - 1];
+      factorialResult.innerHTML = `<p>${number}! = ${factorialValue}</p>`;
+      factorialResult.innerHTML += `<p>Intermediate Results: ${intermediateResults.join(', ')}</p>`;
+    }
+  </script>
+  <script src="ads.js"></script>
+</body>
+</html>
